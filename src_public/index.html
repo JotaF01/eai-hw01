@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search Lab — US Rail Network</title>
+<style>
+  :root {
+    --bg:#11151c; --panel:#1a2029; --line:#2c3542; --ink:#e6eaf0; --dim:#8b97a8;
+    --edge:#3a4553; --city:#6b7a8d;
+    --visited:#3d5a80; --frontier:#e0a458; --current:#e05c5c;
+    --path:#4ec9a5; --start:#4ec9a5; --goal:#e05c5c;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; display:flex; height:100vh; }
+  #map { flex:1; min-width:0; }
+  aside { width:330px; background:var(--panel); border-left:1px solid var(--line);
+          padding:16px; overflow-y:auto; }
+  h1 { font-size:16px; margin:0 0 4px; }
+  .sub { color:var(--dim); font-size:12px; margin-bottom:16px; }
+  label { display:block; font-size:12px; color:var(--dim); margin:12px 0 4px; }
+  select, button { width:100%; padding:7px 9px; background:#232b36; color:var(--ink);
+                   border:1px solid var(--line); border-radius:5px; font-size:13px; }
+  button { cursor:pointer; }
+  button:hover:not(:disabled) { background:#2c3542; }
+  button:disabled { opacity:.45; cursor:default; }
+  .row { display:flex; gap:8px; }
+  input[type=range] { width:100%; }
+  table { width:100%; border-collapse:collapse; margin-top:6px; font-size:13px; }
+  td { padding:3px 0; }
+  td:last-child { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; }
+  .legend { margin-top:14px; font-size:12px; color:var(--dim); }
+  .legend i { display:inline-block; width:10px; height:10px; border-radius:50%;
+              margin-right:6px; vertical-align:-1px; }
+  .note { margin-top:14px; padding:9px 10px; background:#232b36; border-left:3px solid var(--frontier);
+          border-radius:0 4px 4px 0; font-size:12px; color:var(--dim); }
+  .ok { color:var(--path); } .bad { color:var(--goal); }
+  circle.city { cursor:pointer; }
+  text.lbl { font-size:8px; fill:var(--dim); pointer-events:none; }
+</style>
+</head>
+<body>
+<svg id="map"></svg>
+<aside>
+  <h1>Search Lab — US Rail</h1>
+  <div class="sub" id="size"></div>
+
+  <label>Algorithm</label>
+  <select id="algo"></select>
+
+  <label>Start</label>  <select id="start"></select>
+  <label>Goal</label>   <select id="goal"></select>
+
+  <label>Heuristic weight w &nbsp;<span id="wv">1.0</span> &nbsp;<span class="sub" id="wnote"></span></label>
+  <input type="range" id="w" min="0" max="3" step="0.1" value="1">
+
+  <label>Speed</label>
+  <input type="range" id="speed" min="1" max="200" value="60">
+
+  <div class="row" style="margin-top:14px">
+    <button id="run">Run</button>
+    <button id="step">Step</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <table>
+    <tr><td>Nodes expanded</td><td id="m-exp">—</td></tr>
+    <tr><td>Max frontier</td><td id="m-fr">—</td></tr>
+    <tr><td>Path length</td><td id="m-len">—</td></tr>
+    <tr><td>Path cost</td><td id="m-cost">—</td></tr>
+    <tr><td>Optimal cost</td><td id="m-opt">—</td></tr>
+    <tr><td>Optimal?</td><td id="m-ok">—</td></tr>
+  </table>
+
+  <div class="legend">
+    <i style="background:var(--current)"></i>expanding now<br>
+    <i style="background:var(--frontier)"></i>frontier<br>
+    <i style="background:var(--visited)"></i>visited<br>
+    <i style="background:var(--path)"></i>solution path
+  </div>
+  <div class="note" id="hint">Click a city on the map to set the start; shift-click to set the goal.</div>
+</aside>
+
+<script src="graph-data.js"></script>
+<!-- student.js contains the student's algorithms and yields the snapshots that
+     this page visualizes. The public distribution never loads an answer key. -->
+<script src="student.js"></script>
+<script>
+// ---------- Albers Equal Area Conic (standard USA parameters) ----------
+const R = 6371, D = Math.PI/180;
+const phi0 = 37.5*D, lam0 = -96*D, p1 = 29.5*D, p2 = 45.5*D;
+const n  = (Math.sin(p1) + Math.sin(p2)) / 2;
+const Cc = Math.cos(p1)**2 + 2*n*Math.sin(p1);
+const rho0 = R*Math.sqrt(Cc - 2*n*Math.sin(phi0))/n;
+function project(lat, lon) {
+  const phi = lat*D, lam = lon*D;
+  const rho = R*Math.sqrt(Cc - 2*n*Math.sin(phi))/n;
+  const th  = n*(lam - lam0);
+  return [rho*Math.sin(th), rho*Math.cos(th) - rho0];   // negated: SVG y grows downward
+}
+
+// ---------- graph ----------
+const CITY = new Map(GRAPH.cities.map(c => [c.id, c]));
+const ADJ  = new Map(GRAPH.cities.map(c => [c.id, []]));
+for (const e of GRAPH.edges) {
+  ADJ.get(e.a).push({to:e.b, mi:e.mi});
+  ADJ.get(e.b).push({to:e.a, mi:e.mi});
+}
+const hav = (a,b) => {
+  const A=CITY.get(a), B=CITY.get(b);
+  const f1=A.lat*D, f2=B.lat*D, df=(B.lat-A.lat)*D, dl=(B.lon-A.lon)*D;
+  const x=Math.sin(df/2)**2 + Math.cos(f1)*Math.cos(f2)*Math.sin(dl/2)**2;
+  return 2*3958.8*Math.asin(Math.sqrt(x));   // miles
+};
+function dijkstra(src, dst) {            // reference optimum for the metrics panel
+  const d = new Map([[src,0]]), seen = new Set();
+  while (true) {
+    let u=null, best=Infinity;
+    for (const [k,v] of d) if (!seen.has(k) && v<best) { best=v; u=k; }
+    if (u===null) return Infinity;
+    if (u===dst) return best;
+    seen.add(u);
+    for (const {to,mi} of ADJ.get(u)) {
+      const nd = best+mi;
+      if (nd < (d.get(to) ?? Infinity)) d.set(to, nd);
+    }
+  }
+}
+
+// ---------- layout ----------
+const svg = document.getElementById('map');
+const pts = GRAPH.cities.map(c => { const [x,y]=project(c.lat,c.lon); return {c,x,y}; });
+const xs = pts.map(p=>p.x), ys = pts.map(p=>p.y);
+const minX=Math.min(...xs), maxX=Math.max(...xs), minY=Math.min(...ys), maxY=Math.max(...ys);
+const PAD=40, W=maxX-minX+2*PAD, H=maxY-minY+2*PAD;
+svg.setAttribute('viewBox', `${minX-PAD} ${minY-PAD} ${W} ${H}`);
+const XY = new Map(pts.map(p=>[p.c.id,[p.x,p.y]]));
+
+const NS='http://www.w3.org/2000/svg';
+const mk=(t,a)=>{const e=document.createElementNS(NS,t); for(const k in a) e.setAttribute(k,a[k]); return e;};
+const gEdge=mk('g'), gPath=mk('g'), gCity=mk('g'), gLbl=mk('g');
+svg.append(gEdge,gPath,gCity,gLbl);
+
+const edgeEl=new Map();
+for (const e of GRAPH.edges) {
+  const [x1,y1]=XY.get(e.a), [x2,y2]=XY.get(e.b);
+  const l=mk('line',{x1,y1,x2,y2,stroke:'var(--edge)','stroke-width':1.1});
+  gEdge.append(l); edgeEl.set(e.a+'|'+e.b,l); edgeEl.set(e.b+'|'+e.a,l);
+}
+const cityEl=new Map();
+for (const p of pts) {
+  const c=mk('circle',{cx:p.x,cy:p.y,r:3.2,fill:'var(--city)',class:'city'});
+  c.addEventListener('click',ev=>{ (ev.shiftKey?goalSel:startSel).value=p.c.id; reset(); });
+  c.append(mk('title')).textContent=p.c.id;
+  gCity.append(c); cityEl.set(p.c.id,c);
+  if (p.c.id.match(/New York|Los Angeles|Chicago|Houston|Denver|Miami|Seattle|Boston|Atlanta|Minneapolis/)) {
+    const t=mk('text',{x:p.x+5,y:p.y-4,class:'lbl'}); t.textContent=p.c.name; gLbl.append(t);
+  }
+}
+
+// ---------- controls ----------
+const algoSel=document.getElementById('algo'), startSel=document.getElementById('start'),
+      goalSel=document.getElementById('goal'), wIn=document.getElementById('w'),
+      speedIn=document.getElementById('speed');
+for (const k of Object.keys(window.ALGORITHMS||{})) algoSel.append(new Option(k.toUpperCase(),k));
+for (const c of [...GRAPH.cities].sort((a,b)=>a.id.localeCompare(b.id))) {
+  startSel.append(new Option(c.id,c.id)); goalSel.append(new Option(c.id,c.id));
+}
+startSel.value='Washington, District of Columbia'; goalSel.value='San Francisco, California';
+document.getElementById('size').textContent =
+  `${GRAPH.cities.length} cities · ${GRAPH.edges.length} tracks · weights are miles`;
+
+let gen=null, timer=null, expanded=0, maxFr=0, lastSnap=null;
+
+function clearPaint() {
+  for (const c of cityEl.values()) { c.setAttribute('fill','var(--city)'); c.setAttribute('r',3.2); }
+  gPath.replaceChildren();
+  const s=startSel.value, g=goalSel.value;
+  cityEl.get(s).setAttribute('fill','var(--start)'); cityEl.get(s).setAttribute('r',6);
+  cityEl.get(g).setAttribute('fill','var(--goal)');  cityEl.get(g).setAttribute('r',6);
+}
+function paint(sn) {
+  clearPaint();
+  for (const v of sn.visited)  { const e=cityEl.get(v); if(e){e.setAttribute('fill','var(--visited)'); e.setAttribute('r',3.6);} }
+  for (const f of sn.frontier) { const e=cityEl.get(f); if(e){e.setAttribute('fill','var(--frontier)'); e.setAttribute('r',4.2);} }
+  const e=cityEl.get(sn.current); if(e){e.setAttribute('fill','var(--current)'); e.setAttribute('r',5.5);}
+  const s=startSel.value, g=goalSel.value;
+  cityEl.get(s).setAttribute('fill','var(--start)'); cityEl.get(s).setAttribute('r',6);
+  cityEl.get(g).setAttribute('fill','var(--goal)');  cityEl.get(g).setAttribute('r',6);
+}
+function drawPath(path) {
+  let cost=0;
+  for (let i=0;i<path.length-1;i++) {
+    const [x1,y1]=XY.get(path[i]), [x2,y2]=XY.get(path[i+1]);
+    gPath.append(mk('line',{x1,y1,x2,y2,stroke:'var(--path)','stroke-width':3,'stroke-linecap':'round'}));
+    cost += ADJ.get(path[i]).find(n=>n.to===path[i+1]).mi;
+  }
+  for (const id of path) { const e=cityEl.get(id); e.setAttribute('fill','var(--path)'); e.setAttribute('r',4.5); }
+  const opt = dijkstra(startSel.value, goalSel.value);
+  set('m-len', path.length); set('m-cost', Math.round(cost)+' mi');
+  set('m-opt', Math.round(opt)+' mi');
+  const ok = Math.abs(cost-opt) < 0.5;
+  const el=document.getElementById('m-ok');
+  el.textContent = ok ? 'yes' : `no (+${Math.round(cost-opt)} mi)`;
+  el.className = ok ? 'ok' : 'bad';
+}
+const set=(id,v)=>document.getElementById(id).textContent=v;
+
+function makeProblem() {
+  const goal = goalSel.value;
+  return {
+    start: startSel.value, goal, w: parseFloat(wIn.value),
+    neighbors: id => ADJ.get(id),
+    h: id => hav(id, goal),
+    reconstruct(parent, id) { const out=[]; while(id!=null){out.unshift(id); id=parent.get(id);} return out; },
+  };
+}
+function reset() {
+  clearInterval(timer); timer=null; gen=null; expanded=0; maxFr=0; lastSnap=null;
+  ['m-exp','m-fr','m-len','m-cost','m-opt'].forEach(i=>set(i,'—'));
+  const el=document.getElementById('m-ok'); el.textContent='—'; el.className='';
+  clearPaint();
+}
+function advance() {
+  if (!gen) {
+    const fn = window.ALGORITHMS[algoSel.value];
+    gen = fn(makeProblem());
+  }
+  const r = gen.next();
+  if (r.done) {
+    clearInterval(timer); timer=null;
+    if (Array.isArray(r.value) && r.value.length) drawPath(r.value);
+    else document.getElementById('hint').innerHTML =
+      '<b>No path returned.</b> Either this algorithm is still a stub in <code>student.js</code>, or it failed to reach the goal.';
+    return false;
+  }
+  expanded++; lastSnap=r.value;
+  maxFr = Math.max(maxFr, r.value.frontier.length);
+  set('m-exp', expanded); set('m-fr', maxFr);
+  paint(r.value);
+  return true;
+}
+document.getElementById('step').onclick = () => advance();
+document.getElementById('run').onclick  = () => {
+  if (timer) { clearInterval(timer); timer=null; return; }
+  timer = setInterval(()=>{ if(!advance()) { clearInterval(timer); timer=null; } },
+                      Math.max(4, 205-speedIn.value));
+};
+document.getElementById('reset').onclick = reset;
+[algoSel,startSel,goalSel].forEach(el=>el.onchange=reset);
+wIn.oninput = () => {
+  const w = parseFloat(wIn.value);
+  set('wv', w.toFixed(1));
+  document.getElementById('wnote').textContent =
+    w===0 ? '(= uniform cost)' : w===1 ? '(= A*)' : w<1 ? '(cautious)' : '(may lose optimality)';
+  reset();
+};
+wIn.oninput();
+reset();
+</script>
+</body>
+</html>

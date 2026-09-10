@@ -1,0 +1,2002 @@
+{
+ "meta": {
+  "winding": 1.15,
+  "source": "plotly/datasets us-cities-top-1k",
+  "note": "weight = great-circle miles * winding; h = great-circle miles is admissible",
+  "units": "statute miles"
+ },
+ "cities": [
+  {
+   "id": "New York, New York",
+   "name": "New York",
+   "state": "New York",
+   "lat": 40.7128,
+   "lon": -74.0059
+  },
+  {
+   "id": "Los Angeles, California",
+   "name": "Los Angeles",
+   "state": "California",
+   "lat": 34.0522,
+   "lon": -118.2437
+  },
+  {
+   "id": "Chicago, Illinois",
+   "name": "Chicago",
+   "state": "Illinois",
+   "lat": 41.8781,
+   "lon": -87.6298
+  },
+  {
+   "id": "Houston, Texas",
+   "name": "Houston",
+   "state": "Texas",
+   "lat": 29.7604,
+   "lon": -95.3698
+  },
+  {
+   "id": "Philadelphia, Pennsylvania",
+   "name": "Philadelphia",
+   "state": "Pennsylvania",
+   "lat": 39.9526,
+   "lon": -75.1652
+  },
+  {
+   "id": "Phoenix, Arizona",
+   "name": "Phoenix",
+   "state": "Arizona",
+   "lat": 33.4484,
+   "lon": -112.074
+  },
+  {
+   "id": "San Antonio, Texas",
+   "name": "San Antonio",
+   "state": "Texas",
+   "lat": 29.4241,
+   "lon": -98.4936
+  },
+  {
+   "id": "San Diego, California",
+   "name": "San Diego",
+   "state": "California",
+   "lat": 32.7157,
+   "lon": -117.1611
+  },
+  {
+   "id": "Dallas, Texas",
+   "name": "Dallas",
+   "state": "Texas",
+   "lat": 32.7767,
+   "lon": -96.797
+  },
+  {
+   "id": "San Jose, California",
+   "name": "San Jose",
+   "state": "California",
+   "lat": 37.3382,
+   "lon": -121.8863
+  },
+  {
+   "id": "Austin, Texas",
+   "name": "Austin",
+   "state": "Texas",
+   "lat": 30.2672,
+   "lon": -97.7431
+  },
+  {
+   "id": "Indianapolis, Indiana",
+   "name": "Indianapolis",
+   "state": "Indiana",
+   "lat": 39.7684,
+   "lon": -86.1581
+  },
+  {
+   "id": "Jacksonville, Florida",
+   "name": "Jacksonville",
+   "state": "Florida",
+   "lat": 30.3322,
+   "lon": -81.6557
+  },
+  {
+   "id": "San Francisco, California",
+   "name": "San Francisco",
+   "state": "California",
+   "lat": 37.7749,
+   "lon": -122.4194
+  },
+  {
+   "id": "Columbus, Ohio",
+   "name": "Columbus",
+   "state": "Ohio",
+   "lat": 39.9612,
+   "lon": -82.9988
+  },
+  {
+   "id": "Charlotte, North Carolina",
+   "name": "Charlotte",
+   "state": "North Carolina",
+   "lat": 35.2271,
+   "lon": -80.8431
+  },
+  {
+   "id": "Detroit, Michigan",
+   "name": "Detroit",
+   "state": "Michigan",
+   "lat": 42.3314,
+   "lon": -83.0458
+  },
+  {
+   "id": "El Paso, Texas",
+   "name": "El Paso",
+   "state": "Texas",
+   "lat": 31.7776,
+   "lon": -106.4425
+  },
+  {
+   "id": "Memphis, Tennessee",
+   "name": "Memphis",
+   "state": "Tennessee",
+   "lat": 35.1495,
+   "lon": -90.049
+  },
+  {
+   "id": "Seattle, Washington",
+   "name": "Seattle",
+   "state": "Washington",
+   "lat": 47.6062,
+   "lon": -122.3321
+  },
+  {
+   "id": "Denver, Colorado",
+   "name": "Denver",
+   "state": "Colorado",
+   "lat": 39.7392,
+   "lon": -104.9903
+  },
+  {
+   "id": "Washington, District of Columbia",
+   "name": "Washington",
+   "state": "District of Columbia",
+   "lat": 38.9072,
+   "lon": -77.0369
+  },
+  {
+   "id": "Boston, Massachusetts",
+   "name": "Boston",
+   "state": "Massachusetts",
+   "lat": 42.3601,
+   "lon": -71.0589
+  },
+  {
+   "id": "Nashville, Tennessee",
+   "name": "Nashville",
+   "state": "Tennessee",
+   "lat": 36.1627,
+   "lon": -86.7816
+  },
+  {
+   "id": "Oklahoma City, Oklahoma",
+   "name": "Oklahoma City",
+   "state": "Oklahoma",
+   "lat": 35.4676,
+   "lon": -97.5164
+  },
+  {
+   "id": "Louisville, Kentucky",
+   "name": "Louisville",
+   "state": "Kentucky",
+   "lat": 38.2527,
+   "lon": -85.7585
+  },
+  {
+   "id": "Portland, Oregon",
+   "name": "Portland",
+   "state": "Oregon",
+   "lat": 45.5231,
+   "lon": -122.6765
+  },
+  {
+   "id": "Las Vegas, Nevada",
+   "name": "Las Vegas",
+   "state": "Nevada",
+   "lat": 36.1699,
+   "lon": -115.1398
+  },
+  {
+   "id": "Milwaukee, Wisconsin",
+   "name": "Milwaukee",
+   "state": "Wisconsin",
+   "lat": 43.0389,
+   "lon": -87.9065
+  },
+  {
+   "id": "Albuquerque, New Mexico",
+   "name": "Albuquerque",
+   "state": "New Mexico",
+   "lat": 35.0853,
+   "lon": -106.6056
+  },
+  {
+   "id": "Tucson, Arizona",
+   "name": "Tucson",
+   "state": "Arizona",
+   "lat": 32.2217,
+   "lon": -110.9265
+  },
+  {
+   "id": "Fresno, California",
+   "name": "Fresno",
+   "state": "California",
+   "lat": 36.7468,
+   "lon": -119.7726
+  },
+  {
+   "id": "Sacramento, California",
+   "name": "Sacramento",
+   "state": "California",
+   "lat": 38.5816,
+   "lon": -121.4944
+  },
+  {
+   "id": "Kansas City, Missouri",
+   "name": "Kansas City",
+   "state": "Missouri",
+   "lat": 39.0997,
+   "lon": -94.5786
+  },
+  {
+   "id": "Virginia Beach, Virginia",
+   "name": "Virginia Beach",
+   "state": "Virginia",
+   "lat": 36.8529,
+   "lon": -75.978
+  },
+  {
+   "id": "Atlanta, Georgia",
+   "name": "Atlanta",
+   "state": "Georgia",
+   "lat": 33.749,
+   "lon": -84.388
+  },
+  {
+   "id": "Colorado Springs, Colorado",
+   "name": "Colorado Springs",
+   "state": "Colorado",
+   "lat": 38.8339,
+   "lon": -104.8214
+  },
+  {
+   "id": "Omaha, Nebraska",
+   "name": "Omaha",
+   "state": "Nebraska",
+   "lat": 41.2524,
+   "lon": -95.998
+  },
+  {
+   "id": "Raleigh, North Carolina",
+   "name": "Raleigh",
+   "state": "North Carolina",
+   "lat": 35.7796,
+   "lon": -78.6382
+  },
+  {
+   "id": "Miami, Florida",
+   "name": "Miami",
+   "state": "Florida",
+   "lat": 25.7617,
+   "lon": -80.1918
+  },
+  {
+   "id": "Minneapolis, Minnesota",
+   "name": "Minneapolis",
+   "state": "Minnesota",
+   "lat": 44.9778,
+   "lon": -93.265
+  },
+  {
+   "id": "Tulsa, Oklahoma",
+   "name": "Tulsa",
+   "state": "Oklahoma",
+   "lat": 36.154,
+   "lon": -95.9928
+  },
+  {
+   "id": "Cleveland, Ohio",
+   "name": "Cleveland",
+   "state": "Ohio",
+   "lat": 41.4993,
+   "lon": -81.6944
+  },
+  {
+   "id": "Wichita, Kansas",
+   "name": "Wichita",
+   "state": "Kansas",
+   "lat": 37.6889,
+   "lon": -97.3361
+  },
+  {
+   "id": "New Orleans, Louisiana",
+   "name": "New Orleans",
+   "state": "Louisiana",
+   "lat": 29.9511,
+   "lon": -90.0715
+  },
+  {
+   "id": "Bakersfield, California",
+   "name": "Bakersfield",
+   "state": "California",
+   "lat": 35.3733,
+   "lon": -119.0187
+  },
+  {
+   "id": "Tampa, Florida",
+   "name": "Tampa",
+   "state": "Florida",
+   "lat": 27.9506,
+   "lon": -82.4572
+  },
+  {
+   "id": "St. Louis, Missouri",
+   "name": "St. Louis",
+   "state": "Missouri",
+   "lat": 38.627,
+   "lon": -90.1994
+  },
+  {
+   "id": "Riverside, California",
+   "name": "Riverside",
+   "state": "California",
+   "lat": 33.9533,
+   "lon": -117.3962
+  },
+  {
+   "id": "Corpus Christi, Texas",
+   "name": "Corpus Christi",
+   "state": "Texas",
+   "lat": 27.8006,
+   "lon": -97.3964
+  },
+  {
+   "id": "Lexington-Fayette, Kentucky",
+   "name": "Lexington-Fayette",
+   "state": "Kentucky",
+   "lat": 38.0406,
+   "lon": -84.5037
+  },
+  {
+   "id": "Pittsburgh, Pennsylvania",
+   "name": "Pittsburgh",
+   "state": "Pennsylvania",
+   "lat": 40.4406,
+   "lon": -79.9959
+  },
+  {
+   "id": "Stockton, California",
+   "name": "Stockton",
+   "state": "California",
+   "lat": 37.9577,
+   "lon": -121.2908
+  },
+  {
+   "id": "Cincinnati, Ohio",
+   "name": "Cincinnati",
+   "state": "Ohio",
+   "lat": 39.1031,
+   "lon": -84.512
+  },
+  {
+   "id": "Toledo, Ohio",
+   "name": "Toledo",
+   "state": "Ohio",
+   "lat": 41.6639,
+   "lon": -83.5552
+  },
+  {
+   "id": "Greensboro, North Carolina",
+   "name": "Greensboro",
+   "state": "North Carolina",
+   "lat": 36.0726,
+   "lon": -79.792
+  },
+  {
+   "id": "Lincoln, Nebraska",
+   "name": "Lincoln",
+   "state": "Nebraska",
+   "lat": 40.8258,
+   "lon": -96.6852
+  },
+  {
+   "id": "Buffalo, New York",
+   "name": "Buffalo",
+   "state": "New York",
+   "lat": 42.8864,
+   "lon": -78.8784
+  },
+  {
+   "id": "Fort Wayne, Indiana",
+   "name": "Fort Wayne",
+   "state": "Indiana",
+   "lat": 41.0793,
+   "lon": -85.1394
+  },
+  {
+   "id": "Orlando, Florida",
+   "name": "Orlando",
+   "state": "Florida",
+   "lat": 28.5383,
+   "lon": -81.3792
+  },
+  {
+   "id": "Laredo, Texas",
+   "name": "Laredo",
+   "state": "Texas",
+   "lat": 27.5306,
+   "lon": -99.4803
+  },
+  {
+   "id": "Madison, Wisconsin",
+   "name": "Madison",
+   "state": "Wisconsin",
+   "lat": 43.0731,
+   "lon": -89.4012
+  },
+  {
+   "id": "Lubbock, Texas",
+   "name": "Lubbock",
+   "state": "Texas",
+   "lat": 33.5779,
+   "lon": -101.8552
+  },
+  {
+   "id": "Reno, Nevada",
+   "name": "Reno",
+   "state": "Nevada",
+   "lat": 39.5296,
+   "lon": -119.8138
+  },
+  {
+   "id": "Baton Rouge, Louisiana",
+   "name": "Baton Rouge",
+   "state": "Louisiana",
+   "lat": 30.4583,
+   "lon": -91.1403
+  },
+  {
+   "id": "Boise City, Idaho",
+   "name": "Boise City",
+   "state": "Idaho",
+   "lat": 43.6187,
+   "lon": -116.2146
+  },
+  {
+   "id": "Richmond, Virginia",
+   "name": "Richmond",
+   "state": "Virginia",
+   "lat": 37.5407,
+   "lon": -77.436
+  },
+  {
+   "id": "Birmingham, Alabama",
+   "name": "Birmingham",
+   "state": "Alabama",
+   "lat": 33.5207,
+   "lon": -86.8025
+  },
+  {
+   "id": "Spokane, Washington",
+   "name": "Spokane",
+   "state": "Washington",
+   "lat": 47.6588,
+   "lon": -117.426
+  },
+  {
+   "id": "Rochester, New York",
+   "name": "Rochester",
+   "state": "New York",
+   "lat": 43.161,
+   "lon": -77.6109
+  },
+  {
+   "id": "Des Moines, Iowa",
+   "name": "Des Moines",
+   "state": "Iowa",
+   "lat": 41.6005,
+   "lon": -93.6091
+  },
+  {
+   "id": "Fayetteville, North Carolina",
+   "name": "Fayetteville",
+   "state": "North Carolina",
+   "lat": 35.0527,
+   "lon": -78.8784
+  },
+  {
+   "id": "Oxnard, California",
+   "name": "Oxnard",
+   "state": "California",
+   "lat": 34.1975,
+   "lon": -119.1771
+  },
+  {
+   "id": "Columbus, Georgia",
+   "name": "Columbus",
+   "state": "Georgia",
+   "lat": 32.461,
+   "lon": -84.9877
+  },
+  {
+   "id": "Montgomery, Alabama",
+   "name": "Montgomery",
+   "state": "Alabama",
+   "lat": 32.3668,
+   "lon": -86.3
+  },
+  {
+   "id": "Shreveport, Louisiana",
+   "name": "Shreveport",
+   "state": "Louisiana",
+   "lat": 32.5252,
+   "lon": -93.7502
+  },
+  {
+   "id": "Little Rock, Arkansas",
+   "name": "Little Rock",
+   "state": "Arkansas",
+   "lat": 34.7465,
+   "lon": -92.2896
+  },
+  {
+   "id": "Augusta-Richmond County, Georgia",
+   "name": "Augusta-Richmond County",
+   "state": "Georgia",
+   "lat": 33.4735,
+   "lon": -82.0105
+  },
+  {
+   "id": "Amarillo, Texas",
+   "name": "Amarillo",
+   "state": "Texas",
+   "lat": 35.222,
+   "lon": -101.8313
+  },
+  {
+   "id": "Mobile, Alabama",
+   "name": "Mobile",
+   "state": "Alabama",
+   "lat": 30.6954,
+   "lon": -88.0399
+  },
+  {
+   "id": "Grand Rapids, Michigan",
+   "name": "Grand Rapids",
+   "state": "Michigan",
+   "lat": 42.9634,
+   "lon": -85.6681
+  },
+  {
+   "id": "Salt Lake City, Utah",
+   "name": "Salt Lake City",
+   "state": "Utah",
+   "lat": 40.7608,
+   "lon": -111.891
+  },
+  {
+   "id": "Tallahassee, Florida",
+   "name": "Tallahassee",
+   "state": "Florida",
+   "lat": 30.4383,
+   "lon": -84.2807
+  },
+  {
+   "id": "Huntsville, Alabama",
+   "name": "Huntsville",
+   "state": "Alabama",
+   "lat": 34.7304,
+   "lon": -86.5861
+  },
+  {
+   "id": "Knoxville, Tennessee",
+   "name": "Knoxville",
+   "state": "Tennessee",
+   "lat": 35.9606,
+   "lon": -83.9207
+  },
+  {
+   "id": "Worcester, Massachusetts",
+   "name": "Worcester",
+   "state": "Massachusetts",
+   "lat": 42.2626,
+   "lon": -71.8023
+  },
+  {
+   "id": "Brownsville, Texas",
+   "name": "Brownsville",
+   "state": "Texas",
+   "lat": 25.9017,
+   "lon": -97.4975
+  },
+  {
+   "id": "Chattanooga, Tennessee",
+   "name": "Chattanooga",
+   "state": "Tennessee",
+   "lat": 35.0456,
+   "lon": -85.3097
+  },
+  {
+   "id": "Jackson, Mississippi",
+   "name": "Jackson",
+   "state": "Mississippi",
+   "lat": 32.2988,
+   "lon": -90.1848
+  },
+  {
+   "id": "Santa Rosa, California",
+   "name": "Santa Rosa",
+   "state": "California",
+   "lat": 38.4404,
+   "lon": -122.7141
+  },
+  {
+   "id": "Port St. Lucie, Florida",
+   "name": "Port St. Lucie",
+   "state": "Florida",
+   "lat": 27.273,
+   "lon": -80.3582
+  },
+  {
+   "id": "Cape Coral, Florida",
+   "name": "Cape Coral",
+   "state": "Florida",
+   "lat": 26.5629,
+   "lon": -81.9495
+  },
+  {
+   "id": "Sioux Falls, South Dakota",
+   "name": "Sioux Falls",
+   "state": "South Dakota",
+   "lat": 43.5446,
+   "lon": -96.7311
+  },
+  {
+   "id": "Springfield, Missouri",
+   "name": "Springfield",
+   "state": "Missouri",
+   "lat": 37.209,
+   "lon": -93.2923
+  },
+  {
+   "id": "Salem, Oregon",
+   "name": "Salem",
+   "state": "Oregon",
+   "lat": 44.9429,
+   "lon": -123.0351
+  },
+  {
+   "id": "Lancaster, California",
+   "name": "Lancaster",
+   "state": "California",
+   "lat": 34.6868,
+   "lon": -118.1542
+  },
+  {
+   "id": "Eugene, Oregon",
+   "name": "Eugene",
+   "state": "Oregon",
+   "lat": 44.0521,
+   "lon": -123.0868
+  },
+  {
+   "id": "Salinas, California",
+   "name": "Salinas",
+   "state": "California",
+   "lat": 36.6777,
+   "lon": -121.6555
+  },
+  {
+   "id": "Springfield, Massachusetts",
+   "name": "Springfield",
+   "state": "Massachusetts",
+   "lat": 42.1015,
+   "lon": -72.5898
+  },
+  {
+   "id": "Fort Collins, Colorado",
+   "name": "Fort Collins",
+   "state": "Colorado",
+   "lat": 40.5853,
+   "lon": -105.0844
+  },
+  {
+   "id": "Rockford, Illinois",
+   "name": "Rockford",
+   "state": "Illinois",
+   "lat": 42.2711,
+   "lon": -89.094
+  },
+  {
+   "id": "Bridgeport, Connecticut",
+   "name": "Bridgeport",
+   "state": "Connecticut",
+   "lat": 41.1865,
+   "lon": -73.1952
+  },
+  {
+   "id": "Syracuse, New York",
+   "name": "Syracuse",
+   "state": "New York",
+   "lat": 43.0481,
+   "lon": -76.1474
+  },
+  {
+   "id": "Dayton, Ohio",
+   "name": "Dayton",
+   "state": "Ohio",
+   "lat": 39.7589,
+   "lon": -84.1916
+  },
+  {
+   "id": "Savannah, Georgia",
+   "name": "Savannah",
+   "state": "Georgia",
+   "lat": 32.0835,
+   "lon": -81.0998
+  },
+  {
+   "id": "Clarksville, Tennessee",
+   "name": "Clarksville",
+   "state": "Tennessee",
+   "lat": 36.5298,
+   "lon": -87.3595
+  },
+  {
+   "id": "Killeen, Texas",
+   "name": "Killeen",
+   "state": "Texas",
+   "lat": 31.1171,
+   "lon": -97.7278
+  },
+  {
+   "id": "McAllen, Texas",
+   "name": "McAllen",
+   "state": "Texas",
+   "lat": 26.2034,
+   "lon": -98.23
+  },
+  {
+   "id": "Columbia, South Carolina",
+   "name": "Columbia",
+   "state": "South Carolina",
+   "lat": 34.0007,
+   "lon": -81.0348
+  },
+  {
+   "id": "Waco, Texas",
+   "name": "Waco",
+   "state": "Texas",
+   "lat": 31.5493,
+   "lon": -97.1467
+  }
+ ],
+ "edges": [
+  {
+   "a": "New York, New York",
+   "b": "Philadelphia, Pennsylvania",
+   "mi": 93
+  },
+  {
+   "a": "New York, New York",
+   "b": "Washington, District of Columbia",
+   "mi": 234
+  },
+  {
+   "a": "New York, New York",
+   "b": "Springfield, Massachusetts",
+   "mi": 139
+  },
+  {
+   "a": "New York, New York",
+   "b": "Bridgeport, Connecticut",
+   "mi": 62
+  },
+  {
+   "a": "New York, New York",
+   "b": "Syracuse, New York",
+   "mi": 225
+  },
+  {
+   "a": "Los Angeles, California",
+   "b": "San Diego, California",
+   "mi": 128
+  },
+  {
+   "a": "Los Angeles, California",
+   "b": "Riverside, California",
+   "mi": 56
+  },
+  {
+   "a": "Los Angeles, California",
+   "b": "Oxnard, California",
+   "mi": 62
+  },
+  {
+   "a": "Los Angeles, California",
+   "b": "Lancaster, California",
+   "mi": 51
+  },
+  {
+   "a": "Chicago, Illinois",
+   "b": "Milwaukee, Wisconsin",
+   "mi": 94
+  },
+  {
+   "a": "Chicago, Illinois",
+   "b": "Fort Wayne, Indiana",
+   "mi": 161
+  },
+  {
+   "a": "Chicago, Illinois",
+   "b": "Grand Rapids, Michigan",
+   "mi": 144
+  },
+  {
+   "a": "Chicago, Illinois",
+   "b": "Rockford, Illinois",
+   "mi": 92
+  },
+  {
+   "a": "Houston, Texas",
+   "b": "Austin, Texas",
+   "mi": 168
+  },
+  {
+   "a": "Houston, Texas",
+   "b": "Corpus Christi, Texas",
+   "mi": 210
+  },
+  {
+   "a": "Houston, Texas",
+   "b": "Baton Rouge, Louisiana",
+   "mi": 296
+  },
+  {
+   "a": "Houston, Texas",
+   "b": "Brownsville, Texas",
+   "mi": 341
+  },
+  {
+   "a": "Houston, Texas",
+   "b": "Waco, Texas",
+   "mi": 187
+  },
+  {
+   "a": "Philadelphia, Pennsylvania",
+   "b": "Washington, District of Columbia",
+   "mi": 142
+  },
+  {
+   "a": "Philadelphia, Pennsylvania",
+   "b": "Virginia Beach, Virginia",
+   "mi": 251
+  },
+  {
+   "a": "Philadelphia, Pennsylvania",
+   "b": "Bridgeport, Connecticut",
+   "mi": 154
+  },
+  {
+   "a": "Phoenix, Arizona",
+   "b": "San Diego, California",
+   "mi": 344
+  },
+  {
+   "a": "Phoenix, Arizona",
+   "b": "Las Vegas, Nevada",
+   "mi": 295
+  },
+  {
+   "a": "Phoenix, Arizona",
+   "b": "Albuquerque, New Mexico",
+   "mi": 382
+  },
+  {
+   "a": "Phoenix, Arizona",
+   "b": "Tucson, Arizona",
+   "mi": 124
+  },
+  {
+   "a": "Phoenix, Arizona",
+   "b": "Riverside, California",
+   "mi": 354
+  },
+  {
+   "a": "San Antonio, Texas",
+   "b": "Austin, Texas",
+   "mi": 85
+  },
+  {
+   "a": "San Antonio, Texas",
+   "b": "Corpus Christi, Texas",
+   "mi": 150
+  },
+  {
+   "a": "San Antonio, Texas",
+   "b": "Laredo, Texas",
+   "mi": 165
+  },
+  {
+   "a": "San Antonio, Texas",
+   "b": "Killeen, Texas",
+   "mi": 144
+  },
+  {
+   "a": "San Diego, California",
+   "b": "Tucson, Arizona",
+   "mi": 420
+  },
+  {
+   "a": "San Diego, California",
+   "b": "Riverside, California",
+   "mi": 100
+  },
+  {
+   "a": "San Diego, California",
+   "b": "Oxnard, California",
+   "mi": 178
+  },
+  {
+   "a": "Dallas, Texas",
+   "b": "Oklahoma City, Oklahoma",
+   "mi": 219
+  },
+  {
+   "a": "Dallas, Texas",
+   "b": "Shreveport, Louisiana",
+   "mi": 205
+  },
+  {
+   "a": "Dallas, Texas",
+   "b": "Killeen, Texas",
+   "mi": 146
+  },
+  {
+   "a": "Dallas, Texas",
+   "b": "Waco, Texas",
+   "mi": 100
+  },
+  {
+   "a": "San Jose, California",
+   "b": "San Francisco, California",
+   "mi": 48
+  },
+  {
+   "a": "San Jose, California",
+   "b": "Stockton, California",
+   "mi": 62
+  },
+  {
+   "a": "San Jose, California",
+   "b": "Salinas, California",
+   "mi": 54
+  },
+  {
+   "a": "Austin, Texas",
+   "b": "Corpus Christi, Texas",
+   "mi": 197
+  },
+  {
+   "a": "Austin, Texas",
+   "b": "Killeen, Texas",
+   "mi": 68
+  },
+  {
+   "a": "Austin, Texas",
+   "b": "Waco, Texas",
+   "mi": 110
+  },
+  {
+   "a": "Indianapolis, Indiana",
+   "b": "Louisville, Kentucky",
+   "mi": 123
+  },
+  {
+   "a": "Indianapolis, Indiana",
+   "b": "St. Louis, Missouri",
+   "mi": 265
+  },
+  {
+   "a": "Indianapolis, Indiana",
+   "b": "Cincinnati, Ohio",
+   "mi": 114
+  },
+  {
+   "a": "Indianapolis, Indiana",
+   "b": "Fort Wayne, Indiana",
+   "mi": 121
+  },
+  {
+   "a": "Indianapolis, Indiana",
+   "b": "Dayton, Ohio",
+   "mi": 120
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Tampa, Florida",
+   "mi": 197
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Orlando, Florida",
+   "mi": 144
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Augusta-Richmond County, Georgia",
+   "mi": 251
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Tallahassee, Florida",
+   "mi": 180
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Port St. Lucie, Florida",
+   "mi": 259
+  },
+  {
+   "a": "Jacksonville, Florida",
+   "b": "Savannah, Georgia",
+   "mi": 144
+  },
+  {
+   "a": "San Francisco, California",
+   "b": "Sacramento, California",
+   "mi": 86
+  },
+  {
+   "a": "San Francisco, California",
+   "b": "Stockton, California",
+   "mi": 72
+  },
+  {
+   "a": "San Francisco, California",
+   "b": "Santa Rosa, California",
+   "mi": 56
+  },
+  {
+   "a": "San Francisco, California",
+   "b": "Salinas, California",
+   "mi": 100
+  },
+  {
+   "a": "Columbus, Ohio",
+   "b": "Cleveland, Ohio",
+   "mi": 145
+  },
+  {
+   "a": "Columbus, Ohio",
+   "b": "Pittsburgh, Pennsylvania",
+   "mi": 186
+  },
+  {
+   "a": "Columbus, Ohio",
+   "b": "Cincinnati, Ohio",
+   "mi": 115
+  },
+  {
+   "a": "Columbus, Ohio",
+   "b": "Toledo, Ohio",
+   "mi": 139
+  },
+  {
+   "a": "Columbus, Ohio",
+   "b": "Dayton, Ohio",
+   "mi": 75
+  },
+  {
+   "a": "Charlotte, North Carolina",
+   "b": "Greensboro, North Carolina",
+   "mi": 95
+  },
+  {
+   "a": "Charlotte, North Carolina",
+   "b": "Fayetteville, North Carolina",
+   "mi": 128
+  },
+  {
+   "a": "Charlotte, North Carolina",
+   "b": "Augusta-Richmond County, Georgia",
+   "mi": 159
+  },
+  {
+   "a": "Charlotte, North Carolina",
+   "b": "Columbia, South Carolina",
+   "mi": 98
+  },
+  {
+   "a": "Detroit, Michigan",
+   "b": "Cleveland, Ohio",
+   "mi": 104
+  },
+  {
+   "a": "Detroit, Michigan",
+   "b": "Toledo, Ohio",
+   "mi": 61
+  },
+  {
+   "a": "Detroit, Michigan",
+   "b": "Buffalo, New York",
+   "mi": 248
+  },
+  {
+   "a": "Detroit, Michigan",
+   "b": "Fort Wayne, Indiana",
+   "mi": 159
+  },
+  {
+   "a": "Detroit, Michigan",
+   "b": "Grand Rapids, Michigan",
+   "mi": 161
+  },
+  {
+   "a": "El Paso, Texas",
+   "b": "Albuquerque, New Mexico",
+   "mi": 263
+  },
+  {
+   "a": "El Paso, Texas",
+   "b": "Tucson, Arizona",
+   "mi": 304
+  },
+  {
+   "a": "El Paso, Texas",
+   "b": "Lubbock, Texas",
+   "mi": 338
+  },
+  {
+   "a": "Memphis, Tennessee",
+   "b": "St. Louis, Missouri",
+   "mi": 276
+  },
+  {
+   "a": "Memphis, Tennessee",
+   "b": "Little Rock, Arkansas",
+   "mi": 149
+  },
+  {
+   "a": "Memphis, Tennessee",
+   "b": "Huntsville, Alabama",
+   "mi": 228
+  },
+  {
+   "a": "Memphis, Tennessee",
+   "b": "Jackson, Mississippi",
+   "mi": 227
+  },
+  {
+   "a": "Memphis, Tennessee",
+   "b": "Clarksville, Tennessee",
+   "mi": 205
+  },
+  {
+   "a": "Seattle, Washington",
+   "b": "Portland, Oregon",
+   "mi": 167
+  },
+  {
+   "a": "Seattle, Washington",
+   "b": "Spokane, Washington",
+   "mi": 263
+  },
+  {
+   "a": "Seattle, Washington",
+   "b": "Salem, Oregon",
+   "mi": 215
+  },
+  {
+   "a": "Denver, Colorado",
+   "b": "Albuquerque, New Mexico",
+   "mi": 384
+  },
+  {
+   "a": "Denver, Colorado",
+   "b": "Colorado Springs, Colorado",
+   "mi": 73
+  },
+  {
+   "a": "Denver, Colorado",
+   "b": "Salt Lake City, Utah",
+   "mi": 426
+  },
+  {
+   "a": "Denver, Colorado",
+   "b": "Fort Collins, Colorado",
+   "mi": 67
+  },
+  {
+   "a": "Washington, District of Columbia",
+   "b": "Virginia Beach, Virginia",
+   "mi": 176
+  },
+  {
+   "a": "Washington, District of Columbia",
+   "b": "Pittsburgh, Pennsylvania",
+   "mi": 218
+  },
+  {
+   "a": "Washington, District of Columbia",
+   "b": "Richmond, Virginia",
+   "mi": 111
+  },
+  {
+   "a": "Boston, Massachusetts",
+   "b": "Worcester, Massachusetts",
+   "mi": 44
+  },
+  {
+   "a": "Boston, Massachusetts",
+   "b": "Springfield, Massachusetts",
+   "mi": 92
+  },
+  {
+   "a": "Boston, Massachusetts",
+   "b": "Bridgeport, Connecticut",
+   "mi": 157
+  },
+  {
+   "a": "Boston, Massachusetts",
+   "b": "Syracuse, New York",
+   "mi": 302
+  },
+  {
+   "a": "Nashville, Tennessee",
+   "b": "Louisville, Kentucky",
+   "mi": 178
+  },
+  {
+   "a": "Nashville, Tennessee",
+   "b": "Huntsville, Alabama",
+   "mi": 115
+  },
+  {
+   "a": "Nashville, Tennessee",
+   "b": "Knoxville, Tennessee",
+   "mi": 184
+  },
+  {
+   "a": "Nashville, Tennessee",
+   "b": "Chattanooga, Tennessee",
+   "mi": 130
+  },
+  {
+   "a": "Nashville, Tennessee",
+   "b": "Clarksville, Tennessee",
+   "mi": 47
+  },
+  {
+   "a": "Oklahoma City, Oklahoma",
+   "b": "Tulsa, Oklahoma",
+   "mi": 112
+  },
+  {
+   "a": "Oklahoma City, Oklahoma",
+   "b": "Wichita, Kansas",
+   "mi": 177
+  },
+  {
+   "a": "Oklahoma City, Oklahoma",
+   "b": "Lubbock, Texas",
+   "mi": 321
+  },
+  {
+   "a": "Oklahoma City, Oklahoma",
+   "b": "Amarillo, Texas",
+   "mi": 280
+  },
+  {
+   "a": "Louisville, Kentucky",
+   "b": "Lexington-Fayette, Kentucky",
+   "mi": 80
+  },
+  {
+   "a": "Louisville, Kentucky",
+   "b": "Cincinnati, Ohio",
+   "mi": 103
+  },
+  {
+   "a": "Louisville, Kentucky",
+   "b": "Clarksville, Tennessee",
+   "mi": 170
+  },
+  {
+   "a": "Portland, Oregon",
+   "b": "Boise City, Idaho",
+   "mi": 396
+  },
+  {
+   "a": "Portland, Oregon",
+   "b": "Spokane, Washington",
+   "mi": 333
+  },
+  {
+   "a": "Portland, Oregon",
+   "b": "Salem, Oregon",
+   "mi": 50
+  },
+  {
+   "a": "Portland, Oregon",
+   "b": "Eugene, Oregon",
+   "mi": 119
+  },
+  {
+   "a": "Las Vegas, Nevada",
+   "b": "Bakersfield, California",
+   "mi": 258
+  },
+  {
+   "a": "Las Vegas, Nevada",
+   "b": "Riverside, California",
+   "mi": 229
+  },
+  {
+   "a": "Las Vegas, Nevada",
+   "b": "Salt Lake City, Utah",
+   "mi": 417
+  },
+  {
+   "a": "Las Vegas, Nevada",
+   "b": "Lancaster, California",
+   "mi": 228
+  },
+  {
+   "a": "Milwaukee, Wisconsin",
+   "b": "Madison, Wisconsin",
+   "mi": 87
+  },
+  {
+   "a": "Milwaukee, Wisconsin",
+   "b": "Grand Rapids, Michigan",
+   "mi": 130
+  },
+  {
+   "a": "Milwaukee, Wisconsin",
+   "b": "Rockford, Illinois",
+   "mi": 92
+  },
+  {
+   "a": "Albuquerque, New Mexico",
+   "b": "Tucson, Arizona",
+   "mi": 365
+  },
+  {
+   "a": "Albuquerque, New Mexico",
+   "b": "Colorado Springs, Colorado",
+   "mi": 319
+  },
+  {
+   "a": "Albuquerque, New Mexico",
+   "b": "Lubbock, Texas",
+   "mi": 334
+  },
+  {
+   "a": "Albuquerque, New Mexico",
+   "b": "Amarillo, Texas",
+   "mi": 310
+  },
+  {
+   "a": "Fresno, California",
+   "b": "Bakersfield, California",
+   "mi": 119
+  },
+  {
+   "a": "Fresno, California",
+   "b": "Stockton, California",
+   "mi": 136
+  },
+  {
+   "a": "Fresno, California",
+   "b": "Salinas, California",
+   "mi": 120
+  },
+  {
+   "a": "Sacramento, California",
+   "b": "Stockton, California",
+   "mi": 51
+  },
+  {
+   "a": "Sacramento, California",
+   "b": "Reno, Nevada",
+   "mi": 128
+  },
+  {
+   "a": "Sacramento, California",
+   "b": "Santa Rosa, California",
+   "mi": 77
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Omaha, Nebraska",
+   "mi": 192
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Tulsa, Oklahoma",
+   "mi": 250
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Wichita, Kansas",
+   "mi": 205
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "St. Louis, Missouri",
+   "mi": 274
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Lincoln, Nebraska",
+   "mi": 188
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Des Moines, Iowa",
+   "mi": 207
+  },
+  {
+   "a": "Kansas City, Missouri",
+   "b": "Springfield, Missouri",
+   "mi": 170
+  },
+  {
+   "a": "Virginia Beach, Virginia",
+   "b": "Raleigh, North Carolina",
+   "mi": 190
+  },
+  {
+   "a": "Virginia Beach, Virginia",
+   "b": "Richmond, Virginia",
+   "mi": 107
+  },
+  {
+   "a": "Virginia Beach, Virginia",
+   "b": "Fayetteville, North Carolina",
+   "mi": 235
+  },
+  {
+   "a": "Atlanta, Georgia",
+   "b": "Birmingham, Alabama",
+   "mi": 161
+  },
+  {
+   "a": "Atlanta, Georgia",
+   "b": "Columbus, Georgia",
+   "mi": 110
+  },
+  {
+   "a": "Atlanta, Georgia",
+   "b": "Augusta-Richmond County, Georgia",
+   "mi": 159
+  },
+  {
+   "a": "Atlanta, Georgia",
+   "b": "Knoxville, Tennessee",
+   "mi": 178
+  },
+  {
+   "a": "Atlanta, Georgia",
+   "b": "Chattanooga, Tennessee",
+   "mi": 119
+  },
+  {
+   "a": "Colorado Springs, Colorado",
+   "b": "Amarillo, Texas",
+   "mi": 344
+  },
+  {
+   "a": "Colorado Springs, Colorado",
+   "b": "Fort Collins, Colorado",
+   "mi": 140
+  },
+  {
+   "a": "Omaha, Nebraska",
+   "b": "Lincoln, Nebraska",
+   "mi": 53
+  },
+  {
+   "a": "Omaha, Nebraska",
+   "b": "Des Moines, Iowa",
+   "mi": 145
+  },
+  {
+   "a": "Omaha, Nebraska",
+   "b": "Sioux Falls, South Dakota",
+   "mi": 187
+  },
+  {
+   "a": "Raleigh, North Carolina",
+   "b": "Greensboro, North Carolina",
+   "mi": 78
+  },
+  {
+   "a": "Raleigh, North Carolina",
+   "b": "Richmond, Virginia",
+   "mi": 160
+  },
+  {
+   "a": "Raleigh, North Carolina",
+   "b": "Fayetteville, North Carolina",
+   "mi": 60
+  },
+  {
+   "a": "Miami, Florida",
+   "b": "Port St. Lucie, Florida",
+   "mi": 121
+  },
+  {
+   "a": "Miami, Florida",
+   "b": "Cape Coral, Florida",
+   "mi": 141
+  },
+  {
+   "a": "Minneapolis, Minnesota",
+   "b": "Madison, Wisconsin",
+   "mi": 268
+  },
+  {
+   "a": "Minneapolis, Minnesota",
+   "b": "Des Moines, Iowa",
+   "mi": 269
+  },
+  {
+   "a": "Minneapolis, Minnesota",
+   "b": "Sioux Falls, South Dakota",
+   "mi": 228
+  },
+  {
+   "a": "Minneapolis, Minnesota",
+   "b": "Rockford, Illinois",
+   "mi": 322
+  },
+  {
+   "a": "Tulsa, Oklahoma",
+   "b": "Wichita, Kansas",
+   "mi": 149
+  },
+  {
+   "a": "Tulsa, Oklahoma",
+   "b": "Little Rock, Arkansas",
+   "mi": 264
+  },
+  {
+   "a": "Tulsa, Oklahoma",
+   "b": "Springfield, Missouri",
+   "mi": 191
+  },
+  {
+   "a": "Cleveland, Ohio",
+   "b": "Pittsburgh, Pennsylvania",
+   "mi": 132
+  },
+  {
+   "a": "Cleveland, Ohio",
+   "b": "Toledo, Ohio",
+   "mi": 111
+  },
+  {
+   "a": "Cleveland, Ohio",
+   "b": "Buffalo, New York",
+   "mi": 199
+  },
+  {
+   "a": "Wichita, Kansas",
+   "b": "Lincoln, Nebraska",
+   "mi": 252
+  },
+  {
+   "a": "Wichita, Kansas",
+   "b": "Amarillo, Texas",
+   "mi": 348
+  },
+  {
+   "a": "New Orleans, Louisiana",
+   "b": "Baton Rouge, Louisiana",
+   "mi": 84
+  },
+  {
+   "a": "New Orleans, Louisiana",
+   "b": "Mobile, Alabama",
+   "mi": 151
+  },
+  {
+   "a": "New Orleans, Louisiana",
+   "b": "Jackson, Mississippi",
+   "mi": 187
+  },
+  {
+   "a": "Bakersfield, California",
+   "b": "Oxnard, California",
+   "mi": 94
+  },
+  {
+   "a": "Bakersfield, California",
+   "b": "Lancaster, California",
+   "mi": 78
+  },
+  {
+   "a": "Tampa, Florida",
+   "b": "Orlando, Florida",
+   "mi": 89
+  },
+  {
+   "a": "Tampa, Florida",
+   "b": "Tallahassee, Florida",
+   "mi": 235
+  },
+  {
+   "a": "Tampa, Florida",
+   "b": "Port St. Lucie, Florida",
+   "mi": 157
+  },
+  {
+   "a": "Tampa, Florida",
+   "b": "Cape Coral, Florida",
+   "mi": 116
+  },
+  {
+   "a": "St. Louis, Missouri",
+   "b": "Springfield, Missouri",
+   "mi": 224
+  },
+  {
+   "a": "St. Louis, Missouri",
+   "b": "Clarksville, Tennessee",
+   "mi": 244
+  },
+  {
+   "a": "Riverside, California",
+   "b": "Lancaster, California",
+   "mi": 77
+  },
+  {
+   "a": "Corpus Christi, Texas",
+   "b": "Laredo, Texas",
+   "mi": 148
+  },
+  {
+   "a": "Corpus Christi, Texas",
+   "b": "Brownsville, Texas",
+   "mi": 151
+  },
+  {
+   "a": "Corpus Christi, Texas",
+   "b": "McAllen, Texas",
+   "mi": 140
+  },
+  {
+   "a": "Lexington-Fayette, Kentucky",
+   "b": "Cincinnati, Ohio",
+   "mi": 84
+  },
+  {
+   "a": "Lexington-Fayette, Kentucky",
+   "b": "Knoxville, Tennessee",
+   "mi": 169
+  },
+  {
+   "a": "Pittsburgh, Pennsylvania",
+   "b": "Buffalo, New York",
+   "mi": 205
+  },
+  {
+   "a": "Stockton, California",
+   "b": "Reno, Nevada",
+   "mi": 155
+  },
+  {
+   "a": "Stockton, California",
+   "b": "Salinas, California",
+   "mi": 104
+  },
+  {
+   "a": "Cincinnati, Ohio",
+   "b": "Dayton, Ohio",
+   "mi": 56
+  },
+  {
+   "a": "Toledo, Ohio",
+   "b": "Fort Wayne, Indiana",
+   "mi": 105
+  },
+  {
+   "a": "Toledo, Ohio",
+   "b": "Dayton, Ohio",
+   "mi": 156
+  },
+  {
+   "a": "Greensboro, North Carolina",
+   "b": "Richmond, Virginia",
+   "mi": 190
+  },
+  {
+   "a": "Greensboro, North Carolina",
+   "b": "Fayetteville, North Carolina",
+   "mi": 100
+  },
+  {
+   "a": "Lincoln, Nebraska",
+   "b": "Sioux Falls, South Dakota",
+   "mi": 216
+  },
+  {
+   "a": "Buffalo, New York",
+   "b": "Rochester, New York",
+   "mi": 77
+  },
+  {
+   "a": "Buffalo, New York",
+   "b": "Syracuse, New York",
+   "mi": 159
+  },
+  {
+   "a": "Fort Wayne, Indiana",
+   "b": "Grand Rapids, Michigan",
+   "mi": 153
+  },
+  {
+   "a": "Fort Wayne, Indiana",
+   "b": "Rockford, Illinois",
+   "mi": 253
+  },
+  {
+   "a": "Fort Wayne, Indiana",
+   "b": "Dayton, Ohio",
+   "mi": 120
+  },
+  {
+   "a": "Orlando, Florida",
+   "b": "Port St. Lucie, Florida",
+   "mi": 123
+  },
+  {
+   "a": "Laredo, Texas",
+   "b": "McAllen, Texas",
+   "mi": 138
+  },
+  {
+   "a": "Madison, Wisconsin",
+   "b": "Rockford, Illinois",
+   "mi": 66
+  },
+  {
+   "a": "Lubbock, Texas",
+   "b": "Amarillo, Texas",
+   "mi": 131
+  },
+  {
+   "a": "Lubbock, Texas",
+   "b": "Killeen, Texas",
+   "mi": 339
+  },
+  {
+   "a": "Reno, Nevada",
+   "b": "Boise City, Idaho",
+   "mi": 389
+  },
+  {
+   "a": "Reno, Nevada",
+   "b": "Santa Rosa, California",
+   "mi": 199
+  },
+  {
+   "a": "Reno, Nevada",
+   "b": "Eugene, Oregon",
+   "mi": 408
+  },
+  {
+   "a": "Baton Rouge, Louisiana",
+   "b": "Shreveport, Louisiana",
+   "mi": 241
+  },
+  {
+   "a": "Baton Rouge, Louisiana",
+   "b": "Jackson, Mississippi",
+   "mi": 160
+  },
+  {
+   "a": "Boise City, Idaho",
+   "b": "Spokane, Washington",
+   "mi": 328
+  },
+  {
+   "a": "Boise City, Idaho",
+   "b": "Salt Lake City, Utah",
+   "mi": 341
+  },
+  {
+   "a": "Boise City, Idaho",
+   "b": "Eugene, Oregon",
+   "mi": 395
+  },
+  {
+   "a": "Birmingham, Alabama",
+   "b": "Columbus, Georgia",
+   "mi": 147
+  },
+  {
+   "a": "Birmingham, Alabama",
+   "b": "Montgomery, Alabama",
+   "mi": 98
+  },
+  {
+   "a": "Birmingham, Alabama",
+   "b": "Mobile, Alabama",
+   "mi": 239
+  },
+  {
+   "a": "Birmingham, Alabama",
+   "b": "Huntsville, Alabama",
+   "mi": 97
+  },
+  {
+   "a": "Birmingham, Alabama",
+   "b": "Chattanooga, Tennessee",
+   "mi": 156
+  },
+  {
+   "a": "Rochester, New York",
+   "b": "Syracuse, New York",
+   "mi": 85
+  },
+  {
+   "a": "Des Moines, Iowa",
+   "b": "Sioux Falls, South Dakota",
+   "mi": 239
+  },
+  {
+   "a": "Fayetteville, North Carolina",
+   "b": "Columbia, South Carolina",
+   "mi": 164
+  },
+  {
+   "a": "Oxnard, California",
+   "b": "Lancaster, California",
+   "mi": 77
+  },
+  {
+   "a": "Columbus, Georgia",
+   "b": "Montgomery, Alabama",
+   "mi": 88
+  },
+  {
+   "a": "Columbus, Georgia",
+   "b": "Augusta-Richmond County, Georgia",
+   "mi": 214
+  },
+  {
+   "a": "Columbus, Georgia",
+   "b": "Tallahassee, Florida",
+   "mi": 168
+  },
+  {
+   "a": "Montgomery, Alabama",
+   "b": "Mobile, Alabama",
+   "mi": 178
+  },
+  {
+   "a": "Montgomery, Alabama",
+   "b": "Tallahassee, Florida",
+   "mi": 206
+  },
+  {
+   "a": "Shreveport, Louisiana",
+   "b": "Little Rock, Arkansas",
+   "mi": 201
+  },
+  {
+   "a": "Shreveport, Louisiana",
+   "b": "Jackson, Mississippi",
+   "mi": 240
+  },
+  {
+   "a": "Shreveport, Louisiana",
+   "b": "Waco, Texas",
+   "mi": 242
+  },
+  {
+   "a": "Little Rock, Arkansas",
+   "b": "Jackson, Mississippi",
+   "mi": 239
+  },
+  {
+   "a": "Little Rock, Arkansas",
+   "b": "Springfield, Missouri",
+   "mi": 206
+  },
+  {
+   "a": "Augusta-Richmond County, Georgia",
+   "b": "Savannah, Georgia",
+   "mi": 126
+  },
+  {
+   "a": "Augusta-Richmond County, Georgia",
+   "b": "Columbia, South Carolina",
+   "mi": 77
+  },
+  {
+   "a": "Amarillo, Texas",
+   "b": "Fort Collins, Colorado",
+   "mi": 472
+  },
+  {
+   "a": "Mobile, Alabama",
+   "b": "Jackson, Mississippi",
+   "mi": 193
+  },
+  {
+   "a": "Salt Lake City, Utah",
+   "b": "Fort Collins, Colorado",
+   "mi": 410
+  },
+  {
+   "a": "Huntsville, Alabama",
+   "b": "Chattanooga, Tennessee",
+   "mi": 87
+  },
+  {
+   "a": "Huntsville, Alabama",
+   "b": "Clarksville, Tennessee",
+   "mi": 151
+  },
+  {
+   "a": "Knoxville, Tennessee",
+   "b": "Chattanooga, Tennessee",
+   "mi": 116
+  },
+  {
+   "a": "Worcester, Massachusetts",
+   "b": "Springfield, Massachusetts",
+   "mi": 48
+  },
+  {
+   "a": "Worcester, Massachusetts",
+   "b": "Syracuse, New York",
+   "mi": 261
+  },
+  {
+   "a": "Brownsville, Texas",
+   "b": "McAllen, Texas",
+   "mi": 58
+  },
+  {
+   "a": "Port St. Lucie, Florida",
+   "b": "Cape Coral, Florida",
+   "mi": 126
+  },
+  {
+   "a": "Salem, Oregon",
+   "b": "Eugene, Oregon",
+   "mi": 71
+  },
+  {
+   "a": "Springfield, Massachusetts",
+   "b": "Bridgeport, Connecticut",
+   "mi": 81
+  },
+  {
+   "a": "Springfield, Massachusetts",
+   "b": "Syracuse, New York",
+   "mi": 221
+  },
+  {
+   "a": "Savannah, Georgia",
+   "b": "Columbia, South Carolina",
+   "mi": 152
+  },
+  {
+   "a": "Killeen, Texas",
+   "b": "Waco, Texas",
+   "mi": 52
+  }
+ ]
+}
