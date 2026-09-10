@@ -162,8 +162,42 @@ def greedy (p, m):
                 heapq.heappush(frontier, (p.h(nxt), tie, nxt))
     return None
 
+def astar(p,m):
+    tie = 0
+    parent={p.start:None}
+    g = {p.start:0.0}
+    frontier = [(p.w*p.h(p.start), tie, p.start)]
+    closed =set()
+
+    while frontier:
+        m.saw_frontier(len(frontier))
+        _f, _t, city = heapq.heappop(frontier)
+        if city in closed:
+            continue
+        closed.add(city)
+        m.expanded += 1
+
+        if city == p.goal:
+            return p.path(parent, city)
+        
+        for nxt, mi in p.neighbors(city):
+            m.generated += 1
+            tentative = g[city]+mi
+            if tentative < g.get(nxt, math.inf):
+                g[nxt]=tentative
+                parent[nxt]=city
+                tie+=1
+                heapq.heappush(frontier, (tentative+p.w*p.h(nxt),tie, nxt))
+    return None
+
 if __name__ =="__main__":
     r = run(greedy)
     print(f"Greedy:{r['cost']}mi,{r['stops']}stops, "
           f"expanded {r['expanded']},generated {r['generated']},"
           f"peak frontier {r['peak_frontier']}, {r['runtime']:.4f}s")
+
+    r = run(astar)
+    print(f"A*: {r['cost']} mi, {r['stops']} stops, "
+          f"expanded {r['expanded']}, generated {r['generated']}, "
+          f"peak frontier {r['peak_frontier']}, {r['runtime']:.4f}s")
+    print(" -> ".join(c.split(",")[0] for c in r["path"]))
