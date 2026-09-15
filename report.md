@@ -71,13 +71,21 @@ duplicate check. **Peak frontier** is the biggest size the frontier ever had.
 
 ## 4. Analysis
 1. Why does BFS return a different railway route from A*?
+R:\ They optimize two different things. BFS expand level by level, so it finds the route with the fewesr stops: 14 segments, 3551 miles.
+A* orders by miles travelled plus a stright line estimate, so it accepts more stops for shorter distances: 17 segments, 3199 miles.
+
 2. Greedy best-first vs A*: what does greedy ignore, and what did it cost or save?
+R:\ Greedy ignores g, the distance already travelled, and asks only which neighbour looks closest to the goal. On the railway that was a good trade: 17 nodes expanded against A*'s 89, for 54 extra miles. But on board 5 it cost 116 moves against A*'s 34.
+
 3. Which strategy expanded the fewest railway nodes? Did it return the cheapest route?
-4. On the assigned puzzle board, how did greedy and A* differ?
+R:\ Greedy, with 17 nodes against A*'s 89, but it returned 3253 miles against 3199. Greddy was the most efficient process. A* produced the most effiecnt result.
+
 5. Under what assumptions is the A* solution optimal?
+R:\ The heuristic must be admissible and consistent, edge cost positive, and the weight equal to 1. Consistency matters because the implementation uses a closed set and never reopens a node, admissibility holds because the graph's winding factor of 1.15 makes every segment longer than the straight line value the heuristic uses.
+
 6. Which measurement if memory were the limiting resource?
-7. If you added an optional strategy, what did it trade for its result?
-8. If you implemented IDA*, when was its lower memory worth its repeated work?
+R:\ Peak frontier, not nodes expanded. Expanded work is released as the search moves on, while peak frontier is what must fit at once, on board 5 A* held 4287 nodes simultaneously.
+
 ## 5. Reproducibility
 - **Language** Python 3.13.14
 - **Machine:** Windows
