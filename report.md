@@ -68,9 +68,7 @@ duplicate check. **Peak frontier** is the biggest size the frontier ever had.
   New Orleans → Baton Rouge → Shreveport → Waco → Killeen → Lubbock → El Paso → Tucson →
   San Diego → Riverside → Las Vegas → Salt Lake City → Boise City → Reno → Stockton →
   San Francisco
-### Puzzle
 
- 
 ## 4. Analysis
 1. Why does BFS return a different railway route from A*?
 2. Greedy best-first vs A*: what does greedy ignore, and what did it cost or save?
