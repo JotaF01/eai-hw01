@@ -1,10 +1,10 @@
-# Homework 1 — Search strategies on routes and the 15-puzzle
+# Homework 1  Search strategies on routes and the 15-puzzle
 Name: Jesus Ramirez Ardila
 Date: 9/9/2026
  
 ## 1. Problem models
  
-### Part A — railway
+### Part A 
 - **State:** a city id, for example `"St. Louis, Missouri"` (110 cities)
 - **Initial state:** Washington, District of Columbia
 - **Action:** take one track to a neighbor city (244 tracks, both directions)
@@ -21,8 +21,7 @@ St. Louis are the same state. That is why graph-search duplicate detection works
 here: a visited set can drop the second arrival, and each city only needs to
 remember one parent.
  
-### Part B — 15-puzzle
-(pending)
+
  
 ## 2. Strategies
  
@@ -41,7 +40,7 @@ duplicate check. **Peak frontier** is the biggest size the frontier ever had.
  
 ## 3. Results
  
-### Railway — Washington, D.C. → San Francisco, California
+### Railway (Washington, D.C. → San Francisco, California)
  
 | strategy | found? | cost / miles | stops | expanded | generated | peak frontier | runtime (s) | optimal? | note |
 |---|---|---|---|---|---|---|---|---|---|
@@ -50,7 +49,7 @@ duplicate check. **Peak frontier** is the biggest size the frontier ever had.
 | Greedy best-first | yes | 3253 | 16 | 17 | 82 | 34 | 0.0004 | no | uses `h` only, never looks at `g`; 54 miles more |
 | A* (w = 1) | yes | **3199** | 17 | 89 | 403 | 28 | 0.0006 | yes | `f = g + h` with an admissible heuristic |
  
-No strategy reached a cutoff.
+
  
 **Routes**
  
@@ -70,7 +69,7 @@ No strategy reached a cutoff.
   San Diego → Riverside → Las Vegas → Salt Lake City → Boise City → Reno → Stockton →
   San Francisco
 ### Puzzle
-(pending)
+
  
 ## 4. Analysis
 1. Why does BFS return a different railway route from A*?
@@ -82,12 +81,8 @@ No strategy reached a cutoff.
 7. If you added an optional strategy, what did it trade for its result?
 8. If you implemented IDA*, when was its lower memory worth its repeated work?
 ## 5. Reproducibility
-- **Language / runtime:** Python 3.13.14, CPython, standard library only
-- **Machine:** Windows, single thread
-- **Seeds / configuration:** none. Nothing in the code is random. The neighbor lists
-  are sorted by city id, and ties in the priority queue are broken by an insertion
-  counter. So the expanded, generated and peak frontier numbers are the same on any
-  machine; only the runtime changes.
+- **Language** Python 3.13.14
+- **Machine:** Windows
 - **Commands:**
 ```
   python railway/search.py
